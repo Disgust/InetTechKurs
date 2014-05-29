@@ -143,6 +143,20 @@
       <div class="jumbotron">
         <h1>Все о рыбе</h1>
         <p class="lead">Каталог организаций рыбопромысловой и рыбообрабатывающей промышленности г. Калининграда и области. Представленные ниже организации, осуществляют широкий спектр услуг, начиная с вылова, транспортировки и хранения, до переработки и розничной торговли.</p>
+        <div class="col-lg-12" style="text-align:center">
+          <a class="btn btn-primary" ng-click='formShown=!formShown'>Добавить компанию</a>
+        </div>
+        <div class="col-lg-12" ng-if='formShown'>
+          <form name='MarketingForm' ng-submit='addMarketing()'>
+            <input type="text" placeholder="Название фирмы" ng-model='marketingForm.title' required/>
+            <input type="text" placeholder="Сайт" ng-model='marketingForm.url' required/>
+            <textarea placeholder="описание" ng-model='marketingForm.description' required></textarea>
+            <input type="text" placeholder="Адрес" ng-model='marketingForm.addr' required/>
+            <input type="text" placeholder="Телефоны" ng-model='marketingForm.tel' required/>
+            <input type="text" placeholder="Почта" ng-model='marketingForm.email' required/>
+            <input class="btn btn-primary" type="submit" value="Добавить" ng-disabled='MarketingForm.$invalid'/>
+          </form>
+        </div>
       </div>
 
       <div class="row marketing">
@@ -216,21 +230,6 @@
             <br>{{marketingItem.email}}</p>
           </div>
           </div>
-        </div>
-
-        <div class="col-lg-12" style="text-align:center">
-          <a class="btn btn-primary" ng-click='formShown=!formShown'>Добавить компанию</a>
-        </div>
-        <div class="col-lg-12" ng-if='formShown'>
-          <form name='MarketingForm' ng-submit='addMarketing()'>
-            <input type="text" placeholder="Название фирмы" ng-model='marketingForm.title' required/>
-            <input type="text" placeholder="Сайт" ng-model='marketingForm.url' required/>
-            <textarea placeholder="описание" ng-model='marketingForm.description' required></textarea>
-            <input type="text" placeholder="Адрес" ng-model='marketingForm.addr' required/>
-            <input type="text" placeholder="Телефоны" ng-model='marketingForm.tel' required/>
-            <input type="text" placeholder="Почта" ng-model='marketingForm.email' required/>
-            <input class="btn btn-primary" type="submit" value="Добавить" ng-disabled='MarketingForm.$invalid'/>
-          </form>
         </div>
 
       </div>
