@@ -26,8 +26,30 @@
 
     <style>
 
+    html {
+      height: 100%;
+    }
+    body {
+      position: relative;
+      min-height: 100%;
+      margin: 0; padding: 0 0 50px;
+    }
+
+    footer {
+      position: absolute; right: 0; bottom: 0; left: 0;
+      height: 50px;
+    }
+
     .marketing form {
       background: #eee;
+    }
+
+    .ad a {
+      display: block;
+    }
+    .ad a img {
+      display: block;
+      margin: 0 auto;
     }
 
     .clock {
@@ -254,9 +276,17 @@
         </div>
 
       </div>
-      <img src="./img/copyright.gif" style="display:block; margin: 0 auto"/>
+
       <hr/>
-      
+
+      <div class="ad">
+        <a href="http://changecopyright.ru/" target="_blank">
+          <img src="./img/copyright.gif"/>
+        </a>
+      </div>
+
+      <hr/>
+
       <div class="row money">
         <div class="col-lg-6">
           <div id="btc-quote"></div>
@@ -287,17 +317,23 @@
       </section>
 
 
-      <div class="footer">
-        <p>&copy; <a href="http://AWSM.SU">Осомные Технологии, ООО</a> 2014
-
-          <a href="http://www.warlog.ru/" target="_blank"><img border="0" src="http://www.warlog.ru/counter/?i=66" alt="счетчик посещений" title="счетчик посещений" /></a></p>
-      </div>
 
     </div> <!-- /container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+
+    <footer class="footer">
+    <div class="container">
+        <p>&copy; <a href="http://AWSM.SU">Осомные Технологии, ООО</a> 2014</p>
+        <div style="text-align:center">
+          <a href="http://www.warlog.ru/" target="_blank">
+            <img border="0" src="http://www.warlog.ru/counter/?i=66" alt="счетчик посещений" title="счетчик посещений" />
+          </a>
+        </div>
+    </div> <!-- /container -->
+    </footer>
+
+
+
   </body>
 </html>
