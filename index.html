@@ -128,9 +128,9 @@
 
       <section ng-show='route=="home"'>
       <div class="jumbotron">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        <h1>Все о рыбе</h1>
+        <p class="lead">Каталог организаций рыбопромысловой и рыбообрабатывающей промышленности г. Калининграда и области. Представленные ниже организации, осуществляют широкий спектр услуг, начиная с вылова, транспортировки и хранения, до переработки и розничной торговли.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Добавить организацию</a></p>
       </div>
 
       <div class="row marketing">
@@ -226,11 +226,15 @@
       <hr/>
 
       <div class="row money">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div id="btc-quote"></div>
           <script type="text/javascript" src="http://cdn-gh.firebase.com/btcquote/embed.js"></script>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
+          <div id="counter"></div>
+          <a href="http://www.warlog.ru/" target="_blank"><img border="0" src="http://www.warlog.ru/counter/?i=66" alt="счетчик посещений" title="счетчик посещений" /></a>
+          </div>
+        <div class="col-lg-4">
           <div class="clock">
             <h6>Настоящее время:</h6>
             <time clock>{{hh}}:{{mm}}:{{ss}}</time>
@@ -257,7 +261,7 @@
 
 
       <div class="footer">
-        <p>&copy; <a href="AWSM.SU">Осомные Технологии, ООО</a> 2014</p>
+        <p>&copy; <a href="http://AWSM.SU">Осомные Технологии, ООО</a> 2014</p>
       </div>
 
     </div> <!-- /container -->
