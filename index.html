@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='InetTechKurs' ng-controller='AppCtrl'>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +23,19 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script src='./js/angular.min.js'></script>
+    <script>
+
+    angular.module('InetTechKurs', [])
+
+      .controller('AppCtrl', function ($scope, $rootScope) {
+        $rootScope.route= 'home' // маршрут по умолчанию
+      })
+
+    ;
+
+    </script>
   </head>
 
   <body>
@@ -30,13 +43,22 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li ng-class='{"active":route=="home"}'>
+            <a href="#" ng-click='route="home"'>Home</a>
+          </li>
+          <li ng-class='{"active":route=="about"}'>
+            <a href="#" ng-click='route="about"'>About</a>
+          </li>
+          <li ng-class='{"active":route=="contact"}'>
+            <a href="#" ng-click='route="contact"'>Contact</a>
+          </li>
         </ul>
         <h3 class="text-muted">Project name</h3>
       </div>
 
+
+
+      <section ng-if='route=="home"'>
       <div class="jumbotron">
         <h1>Jumbotron heading</h1>
         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
@@ -66,6 +88,21 @@
           <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
       </div>
+      </section>
+
+
+
+      <section ng-if='route=="about"'>
+        About!
+      </section>
+
+
+
+      <section ng-if='route=="contact"'>
+        Contact!
+      </section>
+
+
 
       <div class="footer">
         <p>&copy; Company 2014</p>
