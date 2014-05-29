@@ -73,6 +73,7 @@
         $scope.addMarketing= function () {
           $scope.marketingList.push($scope.marketingForm)
           $scope.marketingForm= {}
+          $scope.marketingFormShown= false
         }
       })
 
@@ -143,6 +144,7 @@
       <div class="jumbotron">
         <h1>Все о рыбе</h1>
         <p class="lead">Каталог организаций рыбопромысловой и рыбообрабатывающей промышленности г. Калининграда и области. Представленные ниже организации, осуществляют широкий спектр услуг, начиная с вылова, транспортировки и хранения, до переработки и розничной торговли.</p>
+<<<<<<< HEAD
         <div class="col-lg-6" style="text-align:left">
           <a class="btn btn-primary" ng-click='formShown=!formShown'>Добавить компанию</a>
         </div>
@@ -154,9 +156,54 @@
             <input type="text" placeholder="Адрес" ng-model='marketingForm.addr' required/>
             <input type="text" placeholder="Телефоны" ng-model='marketingForm.tel' required/>
             <input type="text" placeholder="Почта" ng-model='marketingForm.email' required/>
+=======
+        <p><a class="btn btn-lg btn-success" role="button" ng-click='marketingFormShown=!marketingFormShown'>Добавить организацию</a></p>
+      </div>
+      <div class="jumbotron" ng-if='marketingFormShown'>
+        <form class="form-horizontal" name="MarketingForm" role="form" ng-submit='addMarketing()'>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="marketingFormTitle">Название фирмы</label>
+            <div class="col-sm-9">
+              <input class="form-control" id="marketingFormTitle" type="text" placeholder="Название фирмы" ng-model='marketingForm.title' required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="marketingFormUrl">Сайт фирмы</label>
+            <div class="col-sm-5">
+              <input class="form-control" type="text" id="marketingFormUrl" placeholder="Сайт фирмы" ng-model='marketingForm.url' required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="marketingFormDescription">Описание</label>
+            <div class="col-sm-9">
+              <textarea class="form-control" id="marketingFormDescription" rows="3" placeholder="Описание" ng-model='marketingForm.description' required></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="marketingFormAddr">Адрес фирмы</label>
+            <div class="col-sm-5">
+              <input class="form-control" type="text" id="marketingFormAddr" placeholder="Адрес фирмы" ng-model='marketingForm.addr' required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="marketingFormTel">Телефоны</label>
+            <div class="col-sm-5">
+              <input class="form-control" type="text" id="marketingFormTel" placeholder="Телефоны" ng-model='marketingForm.tel' required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="marketingFormEmail">Электропочта</label>
+            <div class="col-sm-5">
+              <input class="form-control" type="text" id="marketingFormEmail" placeholder="Электропочта" ng-model='marketingForm.email' required/>
+            </div>
+          </div>
+          <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-5">
+>>>>>>> e0d078e1dd03f9e9c048a5ab13fb3a7ef5ce9010
             <input class="btn btn-primary" type="submit" value="Добавить" ng-disabled='MarketingForm.$invalid'/>
-          </form>
-        </div>
+          </div>
+          </div>
+        </form>
       </div>
 
       <div class="row marketing">
@@ -272,7 +319,7 @@
         <p>&copy; <a href="http://AWSM.SU">Осомные Технологии, ООО</a> 2014
           <a href="http://www.warlog.ru/" target="_blank"><img border="0" src="http://www.warlog.ru/counter/?i=66" alt="счетчик посещений" title="счетчик посещений" /></a></p>
       </div>
-      
+
 
     </div> <!-- /container -->
 
