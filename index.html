@@ -26,6 +26,20 @@
 
     <style>
 
+    html {
+      height: 100%;
+    }
+    body {
+      position: relative;
+      min-height: 100%;
+      margin: 0; padding: 0 0 50px;
+    }
+
+    footer {
+      position: absolute; right: 0; bottom: 0; left: 0;
+      height: 50px;
+    }
+
     .marketing form {
       background: #eee;
     }
@@ -314,14 +328,19 @@
 
 
 
-      <div class="footer">
-        <p>&copy; <a href="http://AWSM.SU">Осомные Технологии, ООО</a> 2014
-        <div style="text-align:center"
-          <a href="http://www.warlog.ru/" target="_blank"><img border="0" src="http://www.warlog.ru/counter/?i=66" alt="счетчик посещений" title="счетчик посещений" /></a></p>
-      </div>
-
-
     </div> <!-- /container -->
+
+
+    <footer class="footer">
+    <div class="container">
+        <p>&copy; <a href="http://AWSM.SU">Осомные Технологии, ООО</a> 2014</p>
+        <div style="text-align:center">
+          <a href="http://www.warlog.ru/" target="_blank">
+            <img border="0" src="http://www.warlog.ru/counter/?i=66" alt="счетчик посещений" title="счетчик посещений" />
+          </a>
+        </div>
+    </div> <!-- /container -->
+    </footer>
 
 
     <!-- Bootstrap core JavaScript
