@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-
+    <link rel="stylesheet" type="text/css" href="http://www.gismeteo.ru/static/css/informer2/gs_informerClient.min.css">
     <title>Все о рыбе. Калининград.</title>
 
     <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet"/>
@@ -316,14 +316,13 @@
       <hr/>
 
       <div class="row money">
-        <div class="col-lg-2">
+        <div class="col-lg-3">
           <div id="btc-quote"></div>
           <script type="text/javascript" src="http://cdn-gh.firebase.com/btcquote/embed.js"></script>
         </div>
         <div class="col-lg-3">
             <!-- Gismeteo informer START -->
-            <link rel="stylesheet" type="text/css" href="http://www.gismeteo.ru/static/css/informer2/gs_informerClient.min.css">
-            <div id="gsInformerID-TUYm5t5B1SOl7H" class="gsInformer" style="width:212px;height:92px">
+            <div id="gsInformerID-TUYm5t5B1SOl7H" class="gsInformer" style="margin=0;width:212px;height:92px">
               <div class="gsIContent">
                 <div id="cityLink">
                   <a href="http://www.gismeteo.com/city/daily/4225/" target="_blank">Weather in Kaliningrad</a>
@@ -351,7 +350,10 @@
             <!-- Gismeteo informer END -->
           </div>
         </div>
-        <div class="col-lg-1">
+        <div class="col-lg-3">
+        <table> </table>
+        </div>
+        <div class="col-lg-3">
           <div class="clock">
             <h6>Настоящее время:</h6>
             <time clock>{{hh}}:{{mm}}:{{ss}}</time>
@@ -408,8 +410,5 @@
         </div>
     </div> <!-- /container -->
     </footer>
-
-
-
   </body>
 </html>
